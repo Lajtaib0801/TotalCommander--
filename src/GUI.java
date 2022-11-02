@@ -18,6 +18,9 @@ public class GUI {
         f.setLayout(new GridLayout(1,2,10,0));
         f.add(listL);
         f.add(listR);
+        listL.setSelectedIndex(0);
+        listR.setSelectedIndex(0);
+
     }
 
 }

@@ -11,7 +11,7 @@ public class FileManagement {
         File folder = new File(defPath);
         if (folder.exists()) {
             for (int i = 0; i < folder.listFiles().length; i++) {
-                listmodel.add(i, folder.listFiles()[i]);
+                listmodel.add(i, folder.listFiles()[i].toString().split("/")[folder.listFiles()[i].toString().split("/").length-1]);
             }
         } else {
             listmodel.add(0, format("This file: '%s' does not exist!", defPath));
