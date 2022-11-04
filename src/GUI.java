@@ -7,8 +7,10 @@ public class GUI {
 
     FileManagement fm = new FileManagement();
     GUI(){
-        JList listR = new JList(fm.Filelist());
-        JList listL = new JList(fm.Filelist());
+        JList listR = new JList<>();
+        JList listL = new JList<>();
+        listR = new JList(fm.Filelist(listR));
+        listL = new JList(fm.Filelist(listL));
         JFrame f = new JFrame();
         f.setTitle("TCMD--");
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //close app with "X" and not hide
